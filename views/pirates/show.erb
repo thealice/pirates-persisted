@@ -1,0 +1,15 @@
+
+<h1>Pirate Name: <%= @pirate.name %></h1>
+<ul>
+<li>Height: <%= @pirate.height %></li>
+<li>Weight: <%= @pirate.weight %></li>
+
+<% @pirate.ships.each_with_index do |ship, index| %>
+    <li>Ship <%= index + 1 %> Name: <%= ship.name%></li>
+    <ul>
+    <li>Catgory: <%= ship.category%></li>
+    <li>Booty: <%= ship.booty%></li>
+    </ul>
+    <% end %>
+
+</ul>
